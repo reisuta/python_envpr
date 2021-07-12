@@ -20,3 +20,5 @@ print ('あなたの名前は{}です'.format(name))
 
 a = b = 'hello'
 print(a,b)
+
+print('enf')
