@@ -1,11 +1,11 @@
-list = {1:'cat',2:'dog',3:'elephant',4:'bird'}
+# list = {1:'cat',2:'dog',3:'elephant',4:'bird'}
 
 # print(list[4])
 # print(list.get(7,'does'))
-pri= list.keys()
+# pri= list.keys()
 # sj = pri.split()
-for i in pri:
-    print(i)
+# for i in pri:
+#     print(i)
     
 # print(list.items())
 
