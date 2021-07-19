@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}userlist{% endblock %}
+{% block content %}
+<ul>
+    <h1>先頭の人は{{users|first}}</h1>
+    <h1>先頭の人は{{users|sort|first}}</h1>
+    <h1>先頭の人は{{users|random}}</h1>
+    {% for user in users %}
+        <li>{{ user|replace('Taro','太郎') }}</li>
+    {% endfor %}
+    </ul>
+    {% if is_login %}
+    <p>ログイン済みです</p>
+    {% else %}
+    <p>ログインしていません。</p>
+    {% endif %}
+    {% if 'Taro' in users %}
+    <p>多呂は存在します。</p>
+    {% endif %}
+{% endblock %}

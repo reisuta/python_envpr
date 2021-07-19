@@ -1,4 +1,5 @@
 from logging import DEBUG
+import re
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -14,6 +15,15 @@ def home(user_name, age):
         'age':age
     }
     return render_template('home.html',user_info=login_user)
+
+@app.route('/userlist')
+def user_list():
+    users = [
+        'Taro', 'Jiro', 'Saburo','Shiro'
+    ]
+    is_login = True
+    return render_template('userlist.html',users=users, is_login=is_login)
+
 
 
 if __name__ == '__main__':
