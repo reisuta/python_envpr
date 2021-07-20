@@ -43,6 +43,7 @@ def user_list():
     is_login = True
     return render_template('userlist.html',users=users, is_login=is_login)
 
+
 @app.route('/user/<string:user_name>/<int:age>')
 def user(user_name, age):
     if user_name in ['Taro', 'Jiro', 'Saburo']:
